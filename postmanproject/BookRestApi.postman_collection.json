@@ -1,0 +1,119 @@
+{
+	"info": {
+		"_postman_id": "98949259-f8b1-4801-b92f-fa5cba645615",
+		"name": "BookRestApi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "/book {InsertBook}",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"isbn\" : \"1\", \"title\": \"Book One\", \"Author\" : { \"Firstname\" : \"John\", \"Lastname\": \"Doe\"}}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/books",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"books"
+					]
+				},
+				"description": "Insert Book "
+			},
+			"response": []
+		},
+		{
+			"name": "/books/{isbn} FindBookByIsbn",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/books/1",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"books",
+						"1"
+					]
+				},
+				"description": "Find Book by isbn number"
+			},
+			"response": []
+		},
+		{
+			"name": "/books/{isbn} (UpdateBook)",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"title\": \"Updated One\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/books/1",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"books",
+						"1"
+					]
+				},
+				"description": "Update book"
+			},
+			"response": []
+		},
+		{
+			"name": "/books/{isbn}  (DeleteBook)",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/books/1",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"books",
+						"1"
+					]
+				},
+				"description": "Delete Book by isbn number"
+			},
+			"response": []
+		},
+		{
+			"name": "/books  (GetAllBooks)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				},
+				"description": "Get All Books"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
