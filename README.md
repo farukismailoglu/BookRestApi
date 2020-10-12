@@ -33,7 +33,8 @@ PUT /book/{isbn}
 
 ## Run 
 
-Mongodb can be run with **docker-compose up** command.
+step1: Mongodb can be run with **docker-compose up** command.
+step2: Run the project with **go run bookrestapi.go** command.
 
 ## Test
 
